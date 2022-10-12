@@ -2,6 +2,6 @@ import './styles/global.css'
 
 export function App() {
   return (
-    <h1 className="font-bold text-violet-600">Hello word</h1>
+    <h1 className='text-cyan-300 text-2xl'>Hello word</h1>
   )
 }
