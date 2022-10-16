@@ -9,4 +9,32 @@ export default {
   }
 } as Meta<TextProps>
 
-export const Default: StoryObj = {} // criado apenas para o storybook conseguir entender que ha uma exportação sem default
+export const Default: StoryObj<TextProps> = {} // criado apenas para o storybook conseguir entender que ha uma exportação sem default
+
+export const Small: StoryObj<TextProps> = {
+  args: {
+    size: 'sm'
+  }
+}
+
+export const Large: StoryObj<TextProps> = {
+  args: {
+    size: 'lg'
+  }
+}
+
+export const CustomComponent: StoryObj<TextProps> = {
+  args: {
+    asChild: true,
+    children: (
+      <p>Testando</p>
+    )
+  },
+  argTypes: {
+    asChild: {
+      table: {
+        disabled: true,
+      }
+    }
+  }
+}
